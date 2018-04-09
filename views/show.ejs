@@ -8,5 +8,22 @@
 
 	<h1>Fruits show page</h1>
 
+	<!-- let's make the template show the data -->
+	<!-- the data that's available to you inside those brackets is whatever you passed over in your res.render parameter -->
+	The <%= fruit.name; %> is <%= fruit.color;%>.
+
+	<!-- note: the <%= %> tag is for an EXPRESSION / value / variable, etc.  -->
+	<!-- there is another type of tag, <% %>, which lets you add javascript CODE / logic to your template -->
+
+	<% if (fruit.readyToEat === true) { %>
+		The fruit is ready to eat.
+		<% } else { %> 
+		The fruit is <font color='red'><b> NOT</b> </font> ready to eat. 
+		<%}%>
+
+	<!-- CREATE A TEMPLATE FOR YOUR INDEX -->
+	<!-- RENDER IT AT THE CORRECT ROUTE -->
+	<!-- IT SHOULD LIST ALL THE FRUITS -->
+
 </body>
 </html>
