@@ -1,7 +1,8 @@
-const express = require('express');
+const express = require('express'); // note syntax for module (no . or /)
 const app = express();
 
-const fruits = ['apple', 'banana', 'pear']
+// our data
+const fruits = require('./models/fruits.js') // need a relative path to bring in a file -> different than syntax for module
 
 // let's make an index route -> this will list all the fruits
 app.get('/fruits', (req, res) => {
