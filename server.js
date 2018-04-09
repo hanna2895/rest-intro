@@ -11,9 +11,12 @@ app.get('/fruits', (req, res) => {
 
 // *** SHOW *** route -> show all the info about one particular fruit
 app.get('/fruits/:id', (req,res) => {
-	const index = req.params.id;
-	// console.log(fruits[index])
-	res.send(fruits[index]);
+	// const index = req.params.id;
+	// // console.log(fruits[index])
+	// res.send(fruits[index]);
+
+	// you "render" templates where you previously just "send"ed data
+	res.render('show.ejs')
 })
 
 app.listen(3000, () => {
