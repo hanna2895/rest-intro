@@ -6,7 +6,13 @@ const fruits = require('./models/fruits.js') // need a relative path to bring in
 
 // let's make an index route -> this will list all the fruits
 app.get('/fruits', (req, res) => {
-	res.send(fruits)
+
+	// res.send(fruits);
+	res.render('index.ejs', {
+		theFruits: fruits, // <--data
+		pageTitle: "FRUITS INDEX"
+	})
+
 })
 
 // *** SHOW *** route -> show all the info about one particular fruit

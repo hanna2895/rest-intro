@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1> <%= pageTitle %> </h1>
+
+
+	<!-- <%= theFruits %> --> <ul>
+
+	<% for(let i = 0; i < theFruits.length; i++) { %>
+		 <li><a href="/fruits/<%= i %>"><%= theFruits[i].name %></a></li> 
+	<% } %>
+	</ul>
+</body>
+</html>
